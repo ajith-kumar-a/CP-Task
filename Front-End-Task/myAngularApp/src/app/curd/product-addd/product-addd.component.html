@@ -1,0 +1,78 @@
+<!-- <p>product-add works!</p>
+<form [formGroup]="userForm" (ngSubmit)="getData()">
+
+    <div class="form-group">
+        <label for="">Enter Product Name: </label>
+        <input type="text" name="pname" formControlName="pname" class="form-control">
+
+        <div class="alert alert-danger" *ngIf="userForm.get('pname').touched && userForm.get('pname').invalid">
+            <div *ngIf="userForm.get('pname').errors.required">this fields is Required</div>
+            <div *ngIf="userForm.get('pname').errors.pattern">Name Contains only character and min 3-20 length</div>
+        </div>
+    </div>
+
+    <div class="form-group mt-2">
+        <label for="">Enter Price :</label>
+        <input type="text" formControlName="price" class="form-control">
+
+        <div class="alert alert-danger" *ngIf="userForm.get('price').touched && userForm.get('price').invalid">
+            <div *ngIf="userForm.get('price').errors.required">this fields is Required</div>
+            <div *ngIf="userForm.get('price').errors.pattern">Password Contains min 6-20 length</div>
+        </div>
+    </div>
+
+    <div class="form-group  mt-2">
+
+        <label for="">Enter Company :</label>
+        <input type="text" formControlName="company" class="form-control">
+
+        <div class="alert alert-danger" *ngIf="userForm.get('company').touched && userForm.get('company').invalid">
+            <div *ngIf="userForm.get('company').errors.required">this fields is Required</div>
+            <div *ngIf="userForm.get('company').errors.pattern">company name shoud min 3 - 20</div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="userForm.invalid"> submit</button>
+</form> -->
+
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+
+        <form [formGroup]="prodData" (ngSubmit) = "addData()">
+
+            <div>
+                <label for="pname" class="form-label">Enter Product Name : </label>
+                <input type="text" name="pname" id="pname" formControlName="pname" class="form-control">
+
+                <div class="alert alert-danger" *ngIf="prodData.get('pname').touched && prodData.get('pname').invalid">
+                    <div *ngIf="prodData.get('pname').errors.required">this fields is Required</div>
+                    <div *ngIf="prodData.get('pname').errors.pattern">Product Name Contains only character and min 3-20 length</div>
+                </div>
+            </div>
+            <div>
+                <label for="price" class="form-label">Enter Price : </label>
+                <input type="text" name="pname" id="price" formControlName="price" class="form-control">
+
+                <div class="alert alert-danger" *ngIf="prodData.get('price').touched && prodData.get('price').invalid">
+                    <div *ngIf="prodData.get('price').errors.required">This fields is required</div>
+                    <div *ngIf="prodData.get('price').errors.pattern">Product Name Contains only character and min 3-20 length</div>
+
+                </div>
+            </div>
+            <div>
+                <label for="company" class="form-label">Enter Company Name : </label>
+                <input type="text" name="company" id="company" formControlName="company" class="form-control">
+
+                <div class="alert alert-danger" *ngIf="prodData.get('company').touched && prodData.get('company').invalid">
+                    <div *ngIf="prodData.get('company').errors.required">this fields is Required</div>
+                    <div *ngIf="prodData.get('company').errors.pattern">Product Name Contains only character and min 3-20 length</div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3" [disabled]="prodData.invalid"> submit</button>
+        </form>
+    </div>
+
+</div>

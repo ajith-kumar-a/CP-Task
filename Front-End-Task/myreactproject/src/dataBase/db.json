@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "pname": "Laptop",
+      "price": "900000",
+      "company": "HP"
+    },
+    {
+      "id": "2",
+      "pname": "Mac Book",
+      "price": 199999,
+      "company": "APPLE"
+    },
+    {
+      "id": "3",
+      "pname": "Phone",
+      "price": 21000,
+      "company": "APPLE"
+    },
+    {
+      "id": "4",
+      "pname": "Hedset",
+      "price": 499,
+      "company": "BOAT"
+    },
+    {
+      "id": "5",
+      "pname": "USB",
+      "price": "3000",
+      "company": "BOAT"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "userId": "admin@gmail.com",
+      "userPass": "admin@123"
+    },
+    {
+      "id": "2",
+      "userId": "hr@gmail.com",
+      "userPass": "hr@123"
+    },
+    {
+      "id": "3",
+      "userId": "user@gmail.com",
+      "userPass": "user@123"
+    }
+  ]
+}

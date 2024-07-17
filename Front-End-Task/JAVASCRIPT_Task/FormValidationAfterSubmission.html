@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <link rel="stylesheet" href="./formvalid.css">
+    <script src="./formsjs.js"></script>
+</head>
+<body>
+
+    <div class="di">
+    <form action="" name = "myform" onsubmit="return checkAll()" >
+    <!-- <form action="" name = "myform" > -->
+
+        <label for="fname">Enter Your First Name : </label> &nbsp
+        <input type="text" class="input-value" name="fname" id="fname" onblur="checkData(`name`)">
+        <br>
+        <span ><i class="errorMsg" id = "errorName"></i></span>
+        <br>
+
+        <label for="fpass">Enter Your Password : </label> &nbsp  &nbsp
+        <input type="password" class="input-value" name="fpass" id="fpass" onblur="checkData(`pass`)">
+        <br>
+        <span ><i class="errorMsg" id = "errorName"></i></span>
+        <br>
+
+        <label for="uemail">Enter You EmailId :</label> &nbsp &nbsp &nbsp &nbsp
+        <input type="text" class="input-value" name="uemail" id="uemail" onblur="checkData(`email`)">
+        <br>
+        <span ><i class="errorMsg" id = "erroeEmail"></i></span>
+        <br>
+
+        <label for="contact">Enter You Contact No :</label> &nbsp&nbsp 
+        <input type="text" class="input-value" name="contact" id="contact" onblur="checkData(`contact`)">
+        <br>
+        <span ><i class="errorMsg" id = "erroeEmail"></i></span>
+        <br>
+
+        <div>
+
+            <p>Select your gender:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+
+        </div>
+
+        <br>
+        <br>
+        <!-- <button type="submit">Submit</button> -->
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+</body>
+</html>

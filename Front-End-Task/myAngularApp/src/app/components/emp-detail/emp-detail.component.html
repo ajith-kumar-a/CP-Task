@@ -1,0 +1,25 @@
+<p>emp-detail works!</p>
+
+
+<table class="table table-striped">
+
+    <thead>
+        <tr class="table-dark">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Post</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of emp">
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.salary}}</td>
+            <td>{{e.post}}</td>
+            <td>{{e.address}}</td>
+        </tr>
+    </tbody>
+
+</table>

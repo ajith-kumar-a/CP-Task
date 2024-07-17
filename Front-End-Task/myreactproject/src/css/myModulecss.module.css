@@ -1,0 +1,8 @@
+.mod{
+    width: 250px;
+    height: 144px;
+    border: 2px solid red;
+    border-radius: 10px;
+    transition: transform 2s;
+
+}

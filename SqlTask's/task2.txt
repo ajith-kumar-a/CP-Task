@@ -1,0 +1,120 @@
+1. Get department,total salary with respect to a department from employee table.
+
+
+	select department_id department, sum(salary) "total salary" from employee
+	group by department_id
+
+
+
+2. Get department,total salary with respect to a department from employee table order by total salary descending
+	
+	select department_id department, sum(salary) "total_salary" from employee
+	group by department_id 
+	order by total_salary desc
+	
+
+3. Get department wise maximum salary from employee table order by salary ascending
+	
+	select department_id department, max(salary) "Max_salary" from employee
+	group by department_id 
+	order by Max_salary 
+	
+
+4. Get department wise minimum salary from employee table order by salary ascending
+
+	select department_id department, min(salary) "Min_salary" from employee
+	group by department_id 
+	order by Min_salary 
+	
+	
+5. Select department,total salary with respect to a department from employee table where total salary greater
+-- than 800000 order by Total_Salary descending
+
+	select department_id department, sum(salary) "Total_salary" from employee
+	group by department_id 
+	having Total_salary >= 800000
+	order by desc;
+	
+
+6. Select employees first name, last name, job_id and salary whose first name starts with alphabet S
+
+	select first_name,last_name, job_id, salary from employee
+	where first_name like 'S%'
+	
+	
+7. Write a query to select employee with the highest salary
+
+	select concat(first_name," ",last_name) name, salary from employee
+	order by salary desc 
+	limit 1
+	
+8. Select employee with the second highest salary
+
+	select concat(first_name," ",last_name) name, salary from employee
+	group by salary,name
+	having salary = (select salary from employee order by salary desc limit 1,1);
+	
+	
+9. Get the count of employees hired year wise
+
+	select year(hire_date) Year, count(year(hire_date)) hired_on_year from employee
+	group by year(hire_date);
+
+10. Select the employees whose first_name contains “an”
+	
+	select * from employee 
+	where first_name like '%an%';
+
+
+11. Find the employees who joined in August, 1994.
+
+	select * from employee
+	where hire_date between '1994-08-01' and '1994-08-31';
+	
+	select * from employee
+	where year(hire_date) = 1994 and month(hire_date) = 08;
+
+12. Write a SQL query to display the 5 least earning employees
+
+	select concat(first_name," ",last_name) name, salary from employee
+	order by salary 
+	limit 5
+
+
+13. Find the employees hired in the 80s
+
+	select * from employee
+	where hire_date like '%8_\-%';
+
+
+14. Find the employees who joined the company after 15th of the month
+
+	select * from employee
+	where day(hire_date) > 15
+
+
+15. find the count of employees who not received the commission
+
+	select count(*) from employee
+	where commission_pct is null
+
+16. Calculate the total salary inclusive of commission for all the employees
+
+	select employee_id,salary+ifnull(commission_pct,0) 'total_salary' from employee;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

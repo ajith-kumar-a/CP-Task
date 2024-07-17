@@ -1,0 +1,24 @@
+<p>break-fast works!</p>
+
+<!-- <ul>
+    <li *ngFor="let bf of items">
+        <span>{{bf.name}}</span><br>
+        <span>{{bf.price}}</span><br>
+        <img src="bf.photo" alt="">
+        <span>{{bf.photo}}</span><br>
+    </li>
+</ul> -->
+<div class="container">
+
+    <div class="card-group">
+
+        <div class="card" *ngFor="let bf of items">
+            <img [src]="bf.photo" alt="" height="200px" width="300px" style="border-radius: 10px;">
+            <div class="card-body">
+                <h2 class="card-title">{{bf.name }}</h2>
+                <p class="card-text">{{bf.price |currency:"INR"}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

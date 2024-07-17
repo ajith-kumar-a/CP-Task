@@ -1,0 +1,19 @@
+.di{
+    margin: auto;
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+}
+.input-value{
+    border: 1px solid blue;
+    box-shadow: 2px 2px 11px;
+    border-radius: 4px;
+    background-color: aqua;
+    padding: 3px;
+    margin: 5px;
+}
+.errorMsg{
+    color: red;
+    font-size: small;
+    content: "*";
+}

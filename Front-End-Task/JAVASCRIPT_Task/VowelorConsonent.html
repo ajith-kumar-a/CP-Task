@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt T-8</title>
+</head>
+<body>
+
+
+
+    <script>
+
+        let data = prompt("Enter Alphabet")
+
+        let arr = ["a","e","i","o","u"];
+
+        data.toLowerCase();
+
+       let ans = arr.some((val,index) => {
+            return val == data.toLowerCase();
+        })
+       
+        if(ans){
+            document.write("Vowel");
+        }else{
+            document.write("Consonent");
+        }
+
+    </script>
+    
+</body>
+</html>

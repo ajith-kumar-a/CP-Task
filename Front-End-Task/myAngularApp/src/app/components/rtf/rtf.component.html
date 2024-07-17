@@ -1,0 +1,55 @@
+<form [formGroup]="userForm" (ngSubmit)="getData()">
+
+    <div class="form-group">
+        <label for="">Enter your Name: </label>
+        <input type="text" name="fname" formControlName="fname" class="form-control">
+
+        <div class="alert alert-danger" *ngIf="userForm.get('fname').touched && userForm.get('fname').invalid">
+            <div *ngIf="userForm.get('fname').errors.required">this fields is Required</div>
+            <div *ngIf="userForm.get('fname').errors.pattern">Name Contains only character and min 3-20 length</div>
+        </div>
+    </div>
+
+    <div class="form-group mt-2">
+        <label for="">Enter Password :</label>
+        <input type="text" formControlName="password" class="form-control">
+
+        <div class="alert alert-danger" *ngIf="userForm.get('password').touched && userForm.get('password').invalid">
+            <div *ngIf="userForm.get('password').errors.required">this fields is Required</div>
+            <div *ngIf="userForm.get('password').errors.pattern">Password Contains min 6-20 length</div>
+        </div>
+    </div>
+
+    <div class="form-group  mt-2">
+
+        <label for="">Enter Email :</label>
+        <input type="text" formControlName="email" class="form-control">
+
+        <div class="alert alert-danger" *ngIf="userForm.get('email').touched && userForm.get('email').invalid">
+            <div *ngIf="userForm.get('email').errors.required">this fields is Required</div>
+            <div *ngIf="userForm.get('email').errors.pattern">email Contains eg:abc <span>&#;</span> gmail.com</div>
+        </div>
+    </div>
+
+    <div class="form-group  mt-2">
+
+        <label for="">Enter Contact :</label>
+        <input type="text" formControlName="contact" class="form-control">
+
+        <div class="alert alert-danger" *ngIf="userForm.get('contact').touched && userForm.get('contact').invalid">
+            <div *ngIf="userForm.get('contact').errors.required">this fields is Required</div>
+            <div *ngIf="userForm.get('contact').errors.pattern">* Mobile number should contains only 10 - digits </div>
+        </div>
+    </div>
+
+    <div class="form-group  mt-2">
+
+        <label for="term" class="form-check-label">
+            <input type="checkbox" name="term" formControlName="term" class="form-check-input">Accept Term and Condition
+        </label>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="userForm.get('term').touched && userForm.get('term').invalid">please Accept Term and Condition</div>
+
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="userForm.invalid"> submit</button>
+</form>
